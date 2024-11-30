@@ -1,0 +1,362 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap");
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%; 
+  background-color: #FF8C00;
+  font-family: "Ubuntu", sans-serif;
+  display: flex;
+  flex-direction: column;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  border: 0;
+  outline: none;
+  font-family: inherit;
+  font-size: inherit;
+  cursor: pointer;
+}
+
+main {
+  flex: 1;
+}
+
+.navbar {
+  height: 90px;
+  background-color: #D2691E;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar .logo img {
+  max-height: 15px;
+  width: auto;
+}
+
+.navbar .logo i {
+  color: #0aa5ff;
+  font-size: 22px;
+}
+
+.navbar .logo a {
+  font-size: 24px;
+  font-weight: 700;
+  color: white;
+  margin-left: 12px;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.menu-links {
+  display: flex;
+  gap: 24px;
+  border-right: 1px solid #999999;
+  padding-inline: 24px;
+}
+
+.menu-links a {
+  font-weight: 500;
+  color: #FFFFFF;
+  padding: 8px 16px;
+}
+
+.menu-links a:hover {
+  color: white;
+}
+
+.log-in {
+  font-weight: 500;
+  padding: 12px 22px;
+  background-color: transparent;
+  color: #FFFFFF;
+  border-radius: 10px;
+  border: 2px solid #FFA500;
+  transition: 0.2s;
+}
+
+.log-in:hover {
+  background-color: #FFA500;
+  color: white;
+}
+
+.menu-btn {
+  font-size: 32px;
+  color: white;
+  display: none;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .menu {
+    display: none;
+  }
+
+  .menu-btn {
+    display: block;
+  }
+
+  .navbar {
+    padding: 10px 20px;
+  }
+
+  .navbar .logo a {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .menu {
+    gap: 16px;
+  }
+
+  .menu-links {
+    padding-inline: 16px;
+  }
+
+  .menu-links a {
+    font-size: 14px;
+  }
+
+  .log-in {
+    padding: 10px 18px;
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 1025px) {
+  .navbar {
+    padding: 20px 40px;
+  }
+
+  .menu-links a {
+    font-size: 16px;
+  }
+
+  .log-in {
+    padding: 12px 22px;
+  }
+}
+
+footer {
+  background-color: #D2691E;
+  padding: 20px;
+  display: grid;
+  place-content: center;
+  grid-template-areas:
+    "logo socials"
+    "links links";
+  grid-template-columns: repeat(2, 1fr);
+  color: #f9f9f9;
+  text-align: center;
+}
+
+footer::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 68px;
+  background: rgb(0 0 0 / 10%);
+}
+
+.socials {
+  grid-area: socials;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 20px;
+  font-size: 18px;
+}
+
+.socialmedia {
+  width: 40px;
+  height: 40px;
+}
+
+.links {
+  grid-area: links;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  padding: 40px 0 50px;
+}
+
+.links h2 {
+  font-size: 13px;
+  font-weight: 400;
+  color: white;
+}
+
+.links ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  opacity: 0.8;
+  font-size: 14px;
+}
+
+.links a {
+  color: white;
+  text-decoration: none;
+}
+
+.links a:hover {
+  opacity: 1;
+}
+
+.links address {
+  font-style: oblique;
+  line-height: 1.5;
+  font-size: 12px;
+}
+
+.navbar-logo {
+  width: 120px;
+  height: 160px;
+}
+
+.container img {
+  width: 100%;
+  max-width: 550px;
+  display: inline-block;
+  margin: 20px auto;
+}
+
+.container {
+  text-align: center;
+}
+
+h1 {
+  text-align: center;
+  color: white;
+}
+
+p {
+  text-align: center;
+  color: white;
+  font-size: 18px;
+}
+
+.team {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  padding: 40px 20px;
+  background-color: #FF8C00;
+}
+
+.team-member {
+  text-align: center;
+  max-width: 200px;
+  background: #ffffff;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.team-member:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+.team h3 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+.team p {
+  font-size: 14px;
+  color: #555;
+  margin: 0;
+}
+h2{
+  color: white;
+  text-align: center;
+}
+#formulario-contato {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#formulario-contato h2 {
+  text-align: center;
+  color: #D2691E;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+#formulario-contato form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+#formulario-contato label {
+  font-size: 16px;
+  color: #555;
+}
+
+#formulario-contato input,
+#formulario-contato textarea {
+  width: 100%;
+  padding: 10px;
+  border: 2px solid #D2691E;
+  border-radius: 5px;
+  font-size: 16px;
+  outline: none;
+}
+
+#formulario-contato input:focus,
+#formulario-contato textarea:focus {
+  border-color: #FF8C00;
+  box-shadow: 0 0 5px rgba(255, 140, 0, 0.5);
+}
+
+#formulario-contato button {
+  padding: 10px 20px;
+  background-color: #D2691E;
+  color: white;
+  font-size: 18px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#formulario-contato button:hover {
+  background-color: #FF8C00;
+}
+
+#formulario-contato textarea {
+  resize: none;
+  height: 100px;
+}
